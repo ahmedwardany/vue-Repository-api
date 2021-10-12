@@ -34,7 +34,6 @@ class ExampleTest extends TestCase
     }
     public function testAssertPerPage()
     {
-
         $client = new Client();
         $response = $client->get('https://api.github.com/search/repositories?q=created:%3E2019-01-10&sort=stars&order=desc&page=1&per_page=10');
         $result = $response->getBody()->getContents();
